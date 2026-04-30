@@ -268,6 +268,38 @@ If you know what an event does that's missing a description below,
 <li><code>UnauthorizedMemberEvent</code></li>
 </ul>
 
+#### New in 7.X.X
+
+<ul>
+<li><code>AccessControlEvent</code> - Access-control update for the room (e.g. CAPTCHA challenge issued to a viewer)</li>
+<li><code>AccessRecallEvent</code> - Access restriction lifted / recalled for a viewer</li>
+<li><code>BoostCardEvent</code> - Boost cards delivered to the room</li>
+<li><code>BottomEvent</code> - Bottom-of-screen notice (often a punishment or violation banner)</li>
+<li><code>CapsuleEvent</code> - In-room capsule / promotional pill notice</li>
+<li><code>GameRankNotifyEvent</code> - Game-rank notification</li>
+<li><code>GiftBroadcastEvent</code> - Big gift broadcast notice across rooms</li>
+<li><code>GiftDynamicRestrictionEvent</code> - Dynamic gift restriction update</li>
+<li><code>GiftPanelUpdateEvent</code> - Gift panel content update</li>
+<li><code>GiftPromptEvent</code> - Anti-addiction / spending-limit prompt before gifting</li>
+<li><code>GuideEvent</code> - In-room guide / tooltip prompt</li>
+<li><code>LinkMicLayoutStateEvent</code> - Link-mic layout state update</li>
+<li><code>LinkStateEvent</code> - Link-mic channel state update</li>
+<li><code>LiveGameIntroEvent</code> - Live-game intro message</li>
+<li><code>MarqueeAnnouncementEvent</code> - Marquee announcement scrolling across the room</li>
+<li><code>NoticeEvent</code> - Generic notice / system tip in the room</li>
+<li><code>PartnershipDropsUpdateEvent</code> - Partnership drops campaign update</li>
+<li><code>PartnershipGameOfflineEvent</code> - Partnership game taken offline</li>
+<li><code>PartnershipPunishEvent</code> - Partnership punishment notice</li>
+<li><code>PerceptionEvent</code> - Perception dialog (warning / violation surfaced to a viewer)</li>
+<li><code>RoomNotifyEvent</code> - Room-wide notification banner</li>
+<li><code>RoomVerifyEvent</code> - Room verification action (e.g. forced verify / close)</li>
+<li><code>SpeakerEvent</code> - Active speaker update (link-mic audio)</li>
+<li><code>SubNotifyEvent</code> - Subscription notification (subscribe / renew / gift sub)</li>
+<li><code>SubPinEventEvent</code> - Subscription pin card action</li>
+<li><code>ToastEvent</code> - Transient toast notification</li>
+<li><code>ViewerPicksUpdateEvent</code> - Viewer-picks (audience-driven prompt) update</li>
+</ul>
+
 ### `GiftEvent`
 
 Fires every time a gift is sent. Extra static metadata for every gift type
