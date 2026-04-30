@@ -1,14 +1,14 @@
 import asyncio
 import inspect
 import logging
-import traceback
 import re
-from html import unescape
 from asyncio import AbstractEventLoop, Task, CancelledError
+from html import unescape
 from logging import Logger
 from typing import Optional, Type, Dict, Any, Union, Callable, List, Coroutine, AsyncIterator, overload
 
 import httpx
+from TikTokLiveProto.v3.webcast.model.data import EnvelopeBusinessType
 from pyee.asyncio import AsyncIOEventEmitter
 from pyee.base import Handler
 
@@ -683,10 +683,11 @@ class TikTokLiveClient(AsyncIOEventEmitter):
         if isinstance(event, EnvelopeEvent):
             envelope_dt = common_display_type(event.common).lower()
             business_type = getattr(event.envelope_info, "business_type", None)
-            if (
-                    "ttlive_superfanbox" in envelope_dt
-                    or (business_type is not None and int(business_type) == 19)
-            ):
+
+            business_type_match = business_type and business_type == EnvelopeBusinessType.SUPER_FAN_BOX
+
+            # noinspection SpellCheckingInspection
+            if "ttlive_superfanbox" in envelope_dt or business_type_match:
                 return SuperFanBoxEvent().parse(response.payload)
 
         # LiveEndEvent, LivePauseEvent, LiveUnpauseEvent
