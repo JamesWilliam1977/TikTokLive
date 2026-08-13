@@ -344,7 +344,7 @@ There is a [complete example](https://github.com/isaackogan/TikTokLive/blob/mast
 ## Star History
 
 <p align="center">
-    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=isaackogan/TikTokLive&type=Date&theme=dark" onerror="this.src='https://api.star-history.com/svg?repos=isaackogan/TikTokLive&type=Date'" />
+    <img alt="Star History Chart" src="https://star-history.dera.page/svg?repos=isaackogan/TikTokLive&type=Date&theme=dark" onerror="this.src='https://star-history.dera.page/svg?repos=isaackogan/TikTokLive&type=Date'" />
 </p>
 
 ## License
