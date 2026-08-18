@@ -1,7 +1,7 @@
 TikTok LIVE API for Python (Unofficial)
 ==================
 
-The #1 [TikTok LIVE API](https://www.eulerstream.com/) Client for Python (Unofficial, Unaffiliated with ByteDance Ltd.) - Connect to any [TikTok LIVE](https://www.tiktok.com/live) stream and receive real-time chats, gifts, likes, follows & more! With this library you can connect to any TikTok livestream and fetch all data available to users in a stream using just a creator's `@unique_id`.
+TikTok LIVE API Client for Python (Unofficial, Unaffiliated with ByteDance Ltd.) - Connect to any [TikTok LIVE](https://www.tiktok.com/live) stream and receive real-time chats, gifts, likes, follows & more! With this library you can connect to any TikTok livestream and fetch all data available to users in a stream using just a creator's `@unique_id`.
 
 [![Discord](https://img.shields.io/discord/977648006063091742?logo=discord&label=TikTokLive%20Discord&labelColor=%23171717&color=%231877af)](https://discord.gg/N3KSxzvDX8)
 ![Connections](https://api.eulerstream.com/analytics/pips)
@@ -10,7 +10,7 @@ The #1 [TikTok LIVE API](https://www.eulerstream.com/) Client for Python (Unoffi
 ![Forks](https://img.shields.io/github/forks/isaackogan/TikTokLive?style=flat&color=0274b5)
 ![Issues](https://img.shields.io/github/issues/isaackogan/TikTokLive)
 
-> **Note:** This is <strong>not</strong> a production-ready API. It is a reverse engineering project. Use the [WebSocket API](https://www.eulerstream.com/websockets) for production.
+> **Note:** This is <strong>not</strong> a production-ready API. It is a reverse engineering project. Use the [WebSocket API](https://www.eulerstream.com/websockets) for production by [Euler Stream](https://www.eulerstream.com/).
 
 <!--
 <a href="https://www.eulerstream.com/websockets" target="_blank">
