@@ -33,7 +33,16 @@ def main(build_dir: str = "docs/dist/html") -> int:
         print(f"FAIL  build directory missing: {root}")
         return 1
 
-    pages = sorted(root.rglob("*.html"))
+    # html_extra_path passes files through to the site root verbatim, and
+    # search-engine verification tokens are plain text that merely carry an
+    # .html extension. They are not documentation pages, so holding them to
+    # the page invariants below would fail the build on a correct file.
+    # Require a real HTML document rather than special-casing one vendor.
+    pages = [
+        p
+        for p in sorted(root.rglob("*.html"))
+        if "<html" in p.read_text(encoding="utf-8", errors="replace").lower()
+    ]
     index = root / "index.html"
 
     check("index.html exists", index.is_file())
