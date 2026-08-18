@@ -1,28 +1,32 @@
-TikTok LIVE API for Python (Unofficial)
-==================
+# TikTok LIVE API for Python: Real-Time Livestream Events (Unofficial)
 
-TikTok LIVE API Client for Python (Unofficial, Unaffiliated with ByteDance Ltd.) - Connect to any [TikTok LIVE](https://www.tiktok.com/live) stream and receive real-time chats, gifts, likes, follows & more! With this library you can connect to any TikTok livestream and fetch all data available to users in a stream using just a creator's `@unique_id`.
+**TikTokLive** is the most popular **TikTok LIVE API** client for **Python**. Connect to any [TikTok LIVE](https://www.tiktok.com/live) stream and receive **real-time chat messages, gifts, likes, follows, shares, viewer counts, battles, and more** using just a creator's `@unique_id`. No login, no credentials, no app required.
+
+Unofficial and unaffiliated with ByteDance Ltd. With 1.5k+ stars, 290+ forks, and millions of downloads, TikTokLive is the definitive third-party Python library for reading the TikTok LIVE websocket, building TikTok chat bots, gift trackers, live stream overlays, alerts, and analytics tools.
 
 [![Discord](https://img.shields.io/discord/977648006063091742?logo=discord&label=TikTokLive%20Discord&labelColor=%23171717&color=%231877af)](https://discord.gg/N3KSxzvDX8)
-![Connections](https://api.eulerstream.com/analytics/pips)
-![Downloads](https://pepy.tech/badge/tiktoklive)
-![Stars](https://img.shields.io/github/stars/isaackogan/TikTokLive?style=flat&color=0274b5)
-![Forks](https://img.shields.io/github/forks/isaackogan/TikTokLive?style=flat&color=0274b5)
-![Issues](https://img.shields.io/github/issues/isaackogan/TikTokLive)
+![Live TikTok LIVE API connections](https://api.eulerstream.com/analytics/pips)
+![TikTokLive PyPI downloads](https://pepy.tech/badge/tiktoklive)
+![TikTokLive GitHub stars](https://img.shields.io/github/stars/isaackogan/TikTokLive?style=flat&color=0274b5)
+![TikTokLive GitHub forks](https://img.shields.io/github/forks/isaackogan/TikTokLive?style=flat&color=0274b5)
+![TikTokLive open issues](https://img.shields.io/github/issues/isaackogan/TikTokLive)
 
 > **Note:** This is <strong>not</strong> a production-ready API. It is a reverse engineering project. Use the [WebSocket API](https://www.eulerstream.com/websockets) for production by [Euler Stream](https://www.eulerstream.com/).
 
-<!--
-<a href="https://www.eulerstream.com/websockets" target="_blank">
-    <img src="https://www.eulerstream.com/api/advert?l2=WebSocket+API&r=15&b=1.5&bc=404854&o=0.95"/>
-</a>
--->
+## What Can You Build With the TikTok LIVE API?
 
-## TikTok LIVE API
+- **TikTok live chat readers** and chat bots that respond to comments in real time
+- **Gift trackers and donation alerts** for TikTok LIVE streamers (with streak handling)
+- **OBS overlays and stream widgets** driven by live TikTok events
+- **TikTok LIVE analytics**: viewer counts, likes, follows, battle (PK) scores
+- **Moderation tools** that react to deleted messages and room events
+- **Text-to-speech (TTS) readers** and interactive livestream games
+
+## TikTok LIVE API for Production
 
 <table>
 <tr>
-    <td><br/><img width="180px" style="border-radius: 10px" src="https://raw.githubusercontent.com/isaackogan/TikTokLive/master/.github/SquareLogo.png"><br/><br/></td>
+    <td><br/><img width="180px" style="border-radius: 10px" alt="Euler Stream TikTok LIVE API logo" src="https://raw.githubusercontent.com/isaackogan/TikTokLive/master/.github/SquareLogo.png"><br/><br/></td>
     <td>
         <a href="https://www.eulerstream.com/">
             <strong>Euler Stream</strong> offers a comprehensive TikTok LIVE API, WebSocket Server, CAPTCHA Solutions and much more!
@@ -31,37 +35,6 @@ TikTok LIVE API Client for Python (Unofficial, Unaffiliated with ByteDance Ltd.)
 </tr>
 </table>
 
-<!--
-Temporarily Removed May 3rd 2025
-
-## Author's Choice
-
-The following are my two favourite enterprise use-cases for the TikTokLive family of libraries. This is <strong>not</strong> paid promotion, and I receive nothing for these recommendations:
-
-<table>
-<tr>
-    <td><br/><img width="180px" style="border-radius: 10px" src="https://tiktory.com/images/meta/favicon.svg"><br/><br/></td>
-    <td>
-        <a href="https://www.tiktory.com">
-            <strong>Tiktory</strong> provides highly advanced custom overlays, follower alerts, and real-time goal tracking. Seamlessly integrate with OBS and stand out from the crowd!
-        </a>
-    </td>
-</tr>
-</table>
-
-<table>
-<tr>
-    <td><br/><img width="180px" style="border-radius: 10px" src="https://cdn.casterlabs.co/branding/casterlabs/icon.svg"><br/><br/></td>
-    <td>
-        <a href="https://casterlabs.co/">
-            <strong>Casterlabs</strong> is a powerful tool that unifies chats from various streaming platforms, providing a combined chat view, customizable alerts, and handy on-screen widgets for streamers!
-        </a>
-    </td>
-</tr>
-</table>
-
--->
-
 ## Table of Contents
 
 - [Getting Started](#getting-started)
@@ -69,10 +42,12 @@ The following are my two favourite enterprise use-cases for the TikTokLive famil
     - [Methods](#methods)
     - [Properties](#properties)
     - [WebDefaults](#webdefaults)
+- [Events](#events)
 - [Documentation](https://isaackogan.github.io/TikTokLive/)
-- [Other Languages](#other-languages)
+- [Other Languages](#tiktok-live-api-in-other-languages-nodejs-java-c-go-rust)
 - [Community](#community)
 - [Examples](https://github.com/isaackogan/TikTokLive/tree/master/examples)
+- [FAQ](#frequently-asked-questions)
 - [Licensing](#license)
 - [Star History](#star-history)
 - [Contributors](#contributors)
@@ -85,13 +60,13 @@ channel for questions, contributions and ideas.
 
 ## Getting Started
 
-1. Install the module via pip from the [PyPi](https://pypi.org/project/TikTokLive/) repository
+Install the TikTok LIVE API client for Python via pip from the [PyPi](https://pypi.org/project/TikTokLive/) repository:
 
 ```shell script
 pip install TikTokLive
 ```
 
-2. Create your first chat connection
+Then create your first real-time TikTok LIVE chat connection:
 
 ```python
 from TikTokLive import TikTokLiveClient
@@ -120,18 +95,17 @@ if __name__ == '__main__':
     client.run()
 ```
 
-For more quickstart examples, see the [examples folder](https://github.com/isaackogan/TikTokLive/tree/master/examples)
-provided in the source tree.
+For more quickstart examples, including a TikTok live chat reader, gift tracker, and live status checker, see the [examples folder](https://github.com/isaackogan/TikTokLive/tree/master/examples) provided in the source tree.
 
-## Other Languages
+## TikTok LIVE API in Other Languages: Node.js, Java, C#, Go, Rust
 
-TikTokLive is available in several alternate programming languages:
+The TikTokLive TikTok LIVE API is available in several alternate programming languages:
 
-- **Node.JS:** [https://github.com/zerodytrash/TikTok-Live-Connector](https://github.com/zerodytrash/TikTok-Live-Connector)
-- **Java:** [https://github.com/jwdeveloper/TikTok-Live-Java](https://github.com/jwdeveloper/TikTok-Live-Java)
-- **C#/Unity:** [https://github.com/frankvHoof93/TikTokLiveSharp](https://github.com/frankvHoof93/TikTokLiveSharp)
-- **Go:** [https://github.com/steampoweredtaco/gotiktoklive](https://github.com/steampoweredtaco/gotiktoklive)
-- **Rust:** [https://github.com/jwdeveloper/TikTokLiveRust](https://github.com/jwdeveloper/TikTokLiveRust)
+- **Node.JS / JavaScript / TypeScript:** [TikTok-Live-Connector](https://github.com/zerodytrash/TikTok-Live-Connector)
+- **Java:** [TikTok-Live-Java](https://github.com/jwdeveloper/TikTok-Live-Java)
+- **C# / Unity:** [TikTokLiveSharp](https://github.com/frankvHoof93/TikTokLiveSharp)
+- **Go:** [gotiktoklive](https://github.com/steampoweredtaco/gotiktoklive)
+- **Rust:** [TikTokLiveRust](https://github.com/jwdeveloper/TikTokLiveRust)
 
 ## Parameters
 
@@ -188,7 +162,7 @@ the [web_defaults.py](https://github.com/isaackogan/TikTokLive/blob/master/examp
 
 ## Events
 
-Events can be listened to using a decorator or non-decorator method call. The following examples illustrate how you can listen to an event:
+The TikTok LIVE API emits real-time events for everything happening in a livestream: comments, gifts, likes, joins, follows, shares, battles (PK), polls, captions, subscriptions, and moderation actions. Events can be listened to using a decorator or non-decorator method call. The following examples illustrate how you can listen to an event:
 
 ```python
 @client.on(LikeEvent)
@@ -341,10 +315,32 @@ It is considered inefficient to use the connect method to check if a user is liv
 
 There is a [complete example](https://github.com/isaackogan/TikTokLive/blob/master/examples/check_live.py) of how to do this in the [examples](https://github.com/isaackogan/TikTokLive/tree/master/examples) folder.
 
+## Frequently Asked Questions
+
+### Is there an official TikTok LIVE API?
+
+TikTok does not offer a public official API for reading livestream events. TikTokLive is an unofficial, open-source TikTok LIVE API client that reads the same Webcast websocket data available to any viewer of a stream.
+
+### How do I get TikTok LIVE chat messages in Python?
+
+Install with `pip install TikTokLive`, create a `TikTokLiveClient` with the streamer's `@unique_id`, and listen for `CommentEvent`. See the [Getting Started](#getting-started) example above; it takes about ten lines of code.
+
+### Is the TikTok LIVE API free?
+
+Yes. TikTokLive is free and open source under a modified AGPL license. Signing is handled by a third-party signature server ([Euler Stream](https://www.eulerstream.com/)) with free community rate limits; an API key raises those limits.
+
+### Can I track TikTok gifts, likes, and viewer counts in real time?
+
+Yes. `GiftEvent` (with streak handling), `LikeEvent`, and `RoomUserSeqEvent` deliver gifts, likes, and live viewer counts as they happen, alongside 50+ other event types including battles, polls, captions, and subscriptions.
+
+### Does this work with Node.js, Java, C#, Go, or Rust?
+
+Yes, sister libraries exist for each. See [Other Languages](#tiktok-live-api-in-other-languages-nodejs-java-c-go-rust).
+
 ## Star History
 
 <p align="center">
-    <img alt="Star History Chart" src="https://star-history.dera.page/svg?repos=isaackogan/TikTokLive&type=Date&theme=dark" onerror="this.src='https://star-history.dera.page/svg?repos=isaackogan/TikTokLive&type=Date'" />
+    <img alt="TikTokLive GitHub star history chart: growth of the TikTok LIVE API for Python" src="https://star-history.dera.page/svg?repos=isaackogan/TikTokLive&type=Date&theme=dark" onerror="this.src='https://star-history.dera.page/svg?repos=isaackogan/TikTokLive&type=Date'" />
 </p>
 
 ## License
@@ -358,4 +354,3 @@ This project is licensed under a modified AGPL license - see the [LICENSE](LICEN
 
 See also the full list of secondary [contributors](https://github.com/isaackogan/TikTokLive/contributors) who have participated in
 this project.
-
