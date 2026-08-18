@@ -1,8 +1,8 @@
 # TikTok LIVE API for Python: Real-Time Livestream Events (Unofficial)
 
-TikTok LIVE API (TikTokLive) is the #1 TikTok LIVE client for **Python**. Connect to any [TikTok LIVE](https://www.tiktok.com/live) stream and receive **real-time chat messages, gifts, likes, follows, shares, viewer counts, battles, and more** using just a creator's `@unique_id`. No login, no credentials, no app required.
+TikTok LIVE API (TikTokLive) is the #1 TikTok LIVE client for **Python**. Connect to any [TikTok LIVE](https://www.tiktok.com/live) stream and receive **real-time chat messages, gifts, likes, follows, shares, viewer counts, battles, and more** using just a creator's `@unique_id`. No login, no credentials or app are required.
 
-Unofficial and unaffiliated with ByteDance Ltd. With 1.5k+ stars, 290+ forks, and millions of downloads, TikTokLive is the definitive third-party Python library for reading the TikTok LIVE websocket, building TikTok chat bots, gift trackers, live stream overlays, alerts, and analytics tools.
+TikTokLive is the definitive third-party Python library for reading the TikTok LIVE websocket, building TikTok chat bots, gift trackers, live stream overlays, alerts, and analytics tools.
 
 [![Discord](https://img.shields.io/discord/977648006063091742?logo=discord&label=TikTokLive%20Discord&labelColor=%23171717&color=%231877af)](https://discord.gg/N3KSxzvDX8)
 ![Live TikTok LIVE API connections](https://api.eulerstream.com/analytics/pips)
